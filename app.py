@@ -53,4 +53,4 @@ def init_db():
 if __name__ == '__main__':
     # Initialize database before running the app
     init_db()
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(debug=True, host="0.0.0.0", port=5000)
