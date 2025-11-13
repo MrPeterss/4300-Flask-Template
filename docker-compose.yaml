@@ -1,0 +1,17 @@
+version: '3.10'
+services:
+    backend_flask_app:
+        container_name: ${TEAM_NAME}_backend_app
+        restart: always
+        build:
+                context: .
+                dockerfile: Dockerfile
+        ports: 
+                - 0.0.0.0:${APP_PORT}:5001
+        environment:
+                - DB_NAME=${TEAM_NAME}_db
+        volumes:
+                # Persist SQLite database
+                - flask_data:/var/www
+volumes:
+        flask_data:
