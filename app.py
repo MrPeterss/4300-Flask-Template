@@ -50,7 +50,7 @@ def init_db():
             db.session.commit()
             print("Database initialized with episodes and reviews data")
 
+init_db()
+
 if __name__ == '__main__':
-    # Initialize database before running the app
-    init_db()
     app.run(debug=True, host="0.0.0.0", port=5000)
